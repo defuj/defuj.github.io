@@ -72,12 +72,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-gray-400">
-              <p>Jakarta, Indonesia</p>
+              <p>Sumedang, West Java, Indonesia</p>
               <a 
-                href="mailto:contact@defuj.dev"
+                href="mailto:defuj.business@gmail.com"
                 className="block hover:text-primary-400 transition-colors"
               >
-                contact@defuj.dev
+                defuj.business@gmail.com
               </a>
             </div>
           </div>
