@@ -27,13 +27,13 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'contact@defuj.dev',
-      link: 'mailto:contact@defuj.dev',
+      value: 'defuj.business@gmail.com',
+      link: 'mailto:defuj.business@gmail.com',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: 'Jakarta, Indonesia',
+      value: 'Sumedang, West Java, Indonesia',
     },
   ]
 
