@@ -22,7 +22,7 @@ const Hero = () => {
             Hi, I'm <span className="text-gradient">Dede Fuji Abdul</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Front-End Developer
+            Software Engineer | Front-End Developer
           </p>
           <p className="text-lg sm:text-xl text-gray-500 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
             Crafting Seamless Experiences Across Web & Mobile Platforms
