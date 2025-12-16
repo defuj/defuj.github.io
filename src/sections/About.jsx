@@ -6,35 +6,57 @@ const About = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
             About <span className="text-gradient">Me</span>
           </h2>
-          
+
           <div className="glass-effect rounded-2xl p-8 sm:p-12 space-y-6 hover:bg-white/10 transition-all duration-300">
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                Hello! I'm <span className="text-primary-400 font-semibold">Dede Fuji Abdul</span>, 
-                also known as <span className="text-primary-400 font-semibold">defuj</span> across various platforms. 
-                I'm a passionate Front-End Developer with a keen eye for creating seamless and engaging user experiences.
+                Hello! I'm{" "}
+                <span className="text-primary-400 font-semibold">
+                  Dede Fuji Abdul
+                </span>
+                , also known as{" "}
+                <span className="text-primary-400 font-semibold">defuj</span>{" "}
+                across various platforms. I'm a Software Engineer specialized in
+                building scalable and seamless digital experiences across web
+                and mobile platforms.
               </p>
-              
+
               <p className="text-lg">
-                Since <span className="text-primary-400 font-semibold">2016</span>, I've been crafting web and mobile 
-                applications that not only look great but also provide intuitive and efficient user interactions. 
-                My journey in development has allowed me to master modern frameworks and technologies that power 
-                today's digital experiences.
+                With a strong foundation in{" "}
+                <span className="text-primary-400 font-semibold">Flutter</span>,{" "}
+                <span className="text-primary-400 font-semibold">Vue.js</span>,
+                and{" "}
+                <span className="text-primary-400 font-semibold">
+                  TypeScript
+                </span>
+                , I focus on crafting responsive, user-centric interfaces
+                optimized for performance and maintainability. Since{" "}
+                <span className="text-primary-400 font-semibold">2016</span>,
+                I've been delivering cross-platform applications for industries
+                ranging from e-commerce to business automation.
               </p>
-              
+
               <p className="text-lg">
-                I specialize in building responsive web applications using <span className="text-primary-400 font-semibold">ReactJS</span> and{' '}
-                <span className="text-primary-400 font-semibold">VueJS</span>, styled with{' '}
-                <span className="text-primary-400 font-semibold">TailwindCSS</span>. For mobile development, 
-                I leverage <span className="text-primary-400 font-semibold">Flutter</span> and{' '}
-                <span className="text-primary-400 font-semibold">Kotlin with Android Studio</span> to create 
-                native-feeling applications that run smoothly across devices.
+                Over the past years at{" "}
+                <span className="text-primary-400 font-semibold">
+                  PT Sawarga Digital Indonesia
+                </span>{" "}
+                and currently as a{" "}
+                <span className="text-primary-400 font-semibold">
+                  Frontend Team Leader at bitesoft
+                </span>
+                , I've delivered multiple production-ready applications ensuring
+                intuitive UI/UX and robust back-end integration using REST APIs.
               </p>
-              
+
               <p className="text-lg">
-                My approach to development is centered around clean code, performance optimization, and creating 
-                delightful user experiences. I believe that great software is not just about functionality—it's 
-                about creating something that users love to interact with every day.
+                I'm passionate about continuous learning and contributing to the
+                developer community through open-source libraries such as{" "}
+                <span className="text-primary-400 font-semibold">SweetPop</span>{" "}
+                and{" "}
+                <span className="text-primary-400 font-semibold">PrintHub</span>
+                . My core strengths include Flutter, Vue.js, TypeScript, Kotlin,
+                REST API integration, and scalable architecture design.
               </p>
             </div>
 
@@ -45,8 +67,10 @@ const About = () => {
                   <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gradient">50+</div>
-                  <div className="text-sm text-gray-400">Projects Completed</div>
+                  <div className="text-3xl font-bold text-gradient">100+</div>
+                  <div className="text-sm text-gray-400">
+                    Projects Delivered
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-gradient">30+</div>
@@ -62,7 +86,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
