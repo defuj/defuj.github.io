@@ -7,32 +7,34 @@ const Skills = () => {
       title: 'Web Development',
       icon: FaReact,
       skills: [
-        { name: 'ReactJS', icon: FaReact, level: 95 },
-        { name: 'VueJS', icon: FaVuejs, level: 90 },
+        { name: 'Vue.js', icon: FaVuejs, level: 95 },
+        { name: 'Nuxt 4', icon: FaVuejs, level: 90 },
+        { name: 'TypeScript', icon: SiTypescript, level: 90 },
         { name: 'TailwindCSS', icon: SiTailwindcss, level: 95 },
+        { name: 'ReactJS', icon: FaReact, level: 85 },
         { name: 'JavaScript', icon: SiJavascript, level: 90 },
-        { name: 'TypeScript', icon: SiTypescript, level: 85 },
-        { name: 'HTML5', icon: SiHtml5, level: 95 },
-        { name: 'CSS3', icon: SiCss3, level: 95 },
+        { name: 'HTML5/CSS3', icon: SiHtml5, level: 95 },
       ]
     },
     {
       title: 'Mobile Development',
       icon: FaMobile,
       skills: [
-        { name: 'Flutter', icon: SiFlutter, level: 90 },
+        { name: 'Flutter', icon: SiFlutter, level: 95 },
+        { name: 'Kotlin', icon: SiKotlin, level: 85 },
         { name: 'Android Studio', icon: FaAndroid, level: 85 },
-        { name: 'Kotlin', icon: SiKotlin, level: 80 },
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'Backend & Tools',
       icon: SiGit,
       skills: [
+        { name: 'REST APIs', level: 95 },
+        { name: 'PostgreSQL', level: 85 },
+        { name: 'Prisma ORM', level: 85 },
         { name: 'Git', icon: SiGit, level: 90 },
-        { name: 'REST API', level: 85 },
-        { name: 'Responsive Design', level: 95 },
-        { name: 'UI/UX Design', level: 85 },
+        { name: 'Docker', level: 80 },
+        { name: 'Node.js', level: 85 },
       ]
     }
   ]
