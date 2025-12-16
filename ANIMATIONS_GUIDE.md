@@ -193,3 +193,81 @@ const particleCount = isMobile ? 5 : 20
 **Dibuat oleh:** defuj  
 **Tanggal:** 16 Desember 2024  
 **Version:** 2.0
+
+## 🎯 Typing Animation (NEW!)
+
+### Hero Section - Typing Effect
+**Library:** react-type-animation
+
+**Efek yang Diterapkan:**
+- ✨ Typing animation pada judul utama
+- ✨ Multiple text sequences dengan loop
+- ✨ Custom gradient cursor dengan glow effect
+- ✨ Smooth deletion dan re-typing
+- ✨ Emoji support
+
+**Sequence:**
+```javascript
+[
+  'Hi, I\'m ',
+  1000,                              // Pause 1 detik
+  'Hi, I\'m Dede Fuji Abdul',       // Ketik nama
+  2000,                              // Pause 2 detik
+  'Hi, I\'m a Software Engineer',   // Ganti teks
+  2000,
+  'Hi, I\'m a Front-End Developer',
+  2000,
+  'Hi, I\'m defuj 👨‍💻',              // Username
+  2000,
+]
+```
+
+**Custom Cursor Styling:**
+```css
+.Type__cursor {
+  background: linear-gradient(to bottom, #38bdf8, #a855f7);
+  box-shadow: 
+    0 0 10px rgba(56, 189, 248, 0.8), 
+    0 0 20px rgba(168, 85, 247, 0.5);
+}
+```
+
+**Customization Options:**
+
+1. **Mengubah Kecepatan:**
+```javascript
+<TypeAnimation
+  speed={50}        // Typing speed (1-99, semakin kecil semakin cepat)
+  deletionSpeed={60} // Deletion speed
+/>
+```
+
+2. **Mengubah Teks:**
+Ubah array `sequence` di `Hero.jsx`:
+```javascript
+sequence={[
+  'Your text here',
+  2000,  // Pause duration
+  // ... tambah teks lainnya
+]}
+```
+
+3. **Cursor Style:**
+Edit di `index.css` bagian `.Type__cursor`
+
+4. **Disable Loop:**
+```javascript
+repeat={0}  // Ketik sekali saja
+```
+
+**Tips:**
+- Pause duration dalam milliseconds (1000 = 1 detik)
+- Gunakan `\\'` untuk apostrophe dalam string
+- Bisa tambah emoji untuk efek menarik
+- Gradient text otomatis applied
+- Cursor glow effect sudah included
+
+---
+
+**Update Date:** 16 Desember 2024  
+**Feature:** Typing Animation Added ✅

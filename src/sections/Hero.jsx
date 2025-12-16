@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FaLinkedin, FaGithub, FaInstagram, FaTiktok } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { TypeAnimation } from 'react-type-animation'
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -105,28 +106,39 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8">
-          {/* Main Title with Stagger Animation */}
-          <motion.h1 
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Hi, I'm{' '}
-            <motion.span 
-              className="text-gradient inline-block"
-              animate={{ 
-                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-              }}
-              transition={{ 
-                duration: 5,
-                repeat: Infinity,
-                ease: "linear"
-              }}
+          {/* Main Title with Typing Animation */}
+          <div className="min-h-[120px] sm:min-h-[150px] lg:min-h-[180px] flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold"
             >
-              Dede Fuji Abdul
-            </motion.span>
-          </motion.h1>
+              <TypeAnimation
+                sequence={[
+                  'Hi, I\'m ', // Ketik intro
+                  1000,
+                  'Hi, I\'m Dede Fuji Abdul', // Ketik nama lengkap
+                  2000, // Pause
+                  'Hi, I\'m a Software Engineer', // Ganti teks
+                  2000,
+                  'Hi, I\'m a Front-End Developer', // Ganti lagi
+                  2000,
+                  'Hi, I\'m defuj 👨‍💻', // Username dengan emoji
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                deletionSpeed={60}
+                cursor={true}
+                repeat={Infinity}
+                className="text-gradient bg-gradient-to-r from-primary-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
+                style={{ 
+                  backgroundSize: '200% auto',
+                }}
+              />
+            </motion.div>
+          </div>
 
           <motion.p 
             className="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto"

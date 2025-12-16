@@ -214,3 +214,32 @@ html {
   }
 }
 
+/* Custom Typing Cursor */
+.react-type-animation__cursor,
+.Type__cursor {
+  display: inline-block;
+  width: 3px !important;
+  height: 1em;
+  background: linear-gradient(to bottom, #38bdf8, #a855f7) !important;
+  margin-left: 0.1em;
+  animation: blink-cursor 1s step-end infinite !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8), 0 0 20px rgba(168, 85, 247, 0.5) !important;
+  vertical-align: baseline !important;
+  border: none !important;
+  opacity: 1 !important;
+}
+
+@keyframes blink-cursor {
+  0%, 49% { 
+    opacity: 1; 
+  }
+  50%, 100% { 
+    opacity: 0; 
+  }
+}
+
+/* Override default cursor styles */
+.Type__cursor--blink {
+  animation: blink-cursor 1s step-end infinite !important;
+}
+
