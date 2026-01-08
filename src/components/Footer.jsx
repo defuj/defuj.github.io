@@ -41,10 +41,10 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 glass-effect rounded-lg hover:bg-primary-500/20 transition-all duration-300 hover:scale-110"
+                  className="p-2 glass-effect rounded-lg hover:bg-blue-500/20 transition-all duration-300 hover:scale-110"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 hover:text-primary-400 transition-colors" />
+                  <social.icon className="w-5 h-5 text-gray-400 hover:text-blue-400 transition-colors" />
                 </a>
               ))}
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                   <a
                     href={`#${link.id}`}
                     onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
-                    className="text-gray-400 hover:text-primary-400 transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -75,7 +75,7 @@ const Footer = () => {
               <p>Sumedang, West Java, Indonesia</p>
               <a 
                 href="mailto:defuj.business@gmail.com"
-                className="block hover:text-primary-400 transition-colors"
+                className="block hover:text-blue-400 transition-colors"
               >
                 defuj.business@gmail.com
               </a>

@@ -11,8 +11,8 @@ const About = () => {
   return (
     <section id="about" className="relative py-20 overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-primary-500/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-20 right-0 w-72 h-72 bg-purple-500/5 rounded-full blur-[100px]" />
+      <div className="absolute top-20 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-20 right-0 w-72 h-72 bg-blue-700/5 rounded-full blur-[100px]" />
 
       <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -40,7 +40,7 @@ const About = () => {
           >
             {/* Animated corner accent */}
             <motion.div
-              className="absolute top-0 right-0 w-40 h-40 rounded-bl-full bg-gradient-to-bl from-primary-500/20 to-transparent"
+              className="absolute top-0 right-0 w-40 h-40 rounded-bl-full bg-gradient-to-bl from-blue-500/20 to-transparent"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.5, 0.3],
@@ -60,11 +60,11 @@ const About = () => {
                 transition={{ delay: 0.2 }}
               >
                 Hello! I'm{" "}
-                <span className="font-semibold text-primary-400">
+                <span className="font-semibold text-blue-400">
                   Dede Fuji Abdul
                 </span>
                 , also known as{" "}
-                <span className="font-semibold text-primary-400">defuj</span>{" "}
+                <span className="font-semibold text-blue-400">defuj</span>{" "}
                 across various platforms. I'm a Software Engineer specialized in
                 building scalable and seamless digital experiences across web
                 and mobile platforms.
@@ -78,17 +78,17 @@ const About = () => {
                 transition={{ delay: 0.3 }}
               >
                 With a strong foundation in{" "}
-                <span className="font-semibold text-primary-400">
+                <span className="font-semibold text-blue-400">
                   Kotlin (Android)
                 </span>
                 ,{" "}
-                <span className="font-semibold text-primary-400">Flutter</span>,{" "}
-                <span className="font-semibold text-primary-400">Vue.js</span>,
+                <span className="font-semibold text-blue-400">Flutter</span>,{" "}
+                <span className="font-semibold text-blue-400">Vue.js</span>,
                 and{" "}
-                <span className="font-semibold text-primary-400">React.js</span>
+                <span className="font-semibold text-blue-400">React.js</span>
                 , I focus on crafting responsive, user-centric interfaces
                 optimized for performance and maintainability. Since{" "}
-                <span className="font-semibold text-primary-400">2016</span>,
+                <span className="font-semibold text-blue-400">2016</span>,
                 I've been delivering cross-platform applications for industries
                 ranging from e-commerce to business automation.
               </motion.p>
@@ -101,11 +101,11 @@ const About = () => {
                 transition={{ delay: 0.4 }}
               >
                 Over the past years at{" "}
-                <span className="font-semibold text-primary-400">
+                <span className="font-semibold text-blue-400">
                   PT Sawarga Digital Indonesia
                 </span>{" "}
                 and currently as a{" "}
-                <span className="font-semibold text-primary-400">
+                <span className="font-semibold text-blue-400">
                   Frontend Team Leader at bitesoft
                 </span>
                 , I've delivered multiple production-ready applications ensuring
@@ -121,9 +121,9 @@ const About = () => {
               >
                 I'm passionate about continuous learning and contributing to the
                 developer community through open-source libraries such as{" "}
-                <span className="font-semibold text-primary-400">SweetPop</span>{" "}
+                <span className="font-semibold text-blue-400">SweetPop</span>{" "}
                 and{" "}
-                <span className="font-semibold text-primary-400">PrintHub</span>
+                <span className="font-semibold text-blue-400">PrintHub</span>
                 . My core strengths include Flutter, Vue.js, TypeScript, Kotlin,
                 REST API integration, and scalable architecture design.
               </motion.p>
@@ -149,7 +149,7 @@ const About = () => {
                     whileHover={{ scale: 1.1, y: -5 }}
                   >
                     {/* Glow effect on hover */}
-                    <motion.div className="absolute inset-0 transition-opacity duration-300 rounded-lg opacity-0 bg-primary-500/20 blur-xl group-hover:opacity-100" />
+                    <motion.div className="absolute inset-0 transition-opacity duration-300 rounded-lg opacity-0 bg-blue-500/20 blur-xl group-hover:opacity-100" />
 
                     <motion.div
                       className="relative z-10 text-3xl font-bold sm:text-4xl text-gradient"

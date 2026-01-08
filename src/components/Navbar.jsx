@@ -11,6 +11,8 @@ const Navbar = ({ activeSection }) => {
     { name: 'About', id: 'about' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
+    { name: 'GitHub', id: 'github' },
+    { name: 'Support', id: 'donation' },
     { name: 'Experience', id: 'experience' },
     { name: 'Contact', id: 'contact' },
   ]
@@ -52,7 +54,7 @@ const Navbar = ({ activeSection }) => {
           >
             <span className="text-gradient">defuj.dev</span>
             <motion.div
-              className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-400 to-purple-500"
+              className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"
               initial={{ width: 0 }}
               whileHover={{ width: '100%' }}
               transition={{ duration: 0.3 }}
@@ -67,7 +69,7 @@ const Navbar = ({ activeSection }) => {
                 href={`#${item.id}`}
                 onClick={(e) => { e.preventDefault(); scrollToSection(item.id); }}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
-                  activeSection === item.id ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
+                  activeSection === item.id ? 'text-blue-400' : 'text-gray-300 hover:text-blue-400'
                 }`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -77,7 +79,7 @@ const Navbar = ({ activeSection }) => {
               >
                 {activeSection === item.id && (
                   <motion.div
-                    className="absolute inset-0 bg-primary-500/20 rounded-lg"
+                    className="absolute inset-0 bg-blue-500/20 rounded-lg"
                     layoutId="navbar-indicator"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -86,7 +88,7 @@ const Navbar = ({ activeSection }) => {
                 
                 {/* Hover effect */}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-400 to-purple-500"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: activeSection === item.id ? 0 : 1 }}
                   transition={{ duration: 0.3 }}
@@ -98,7 +100,7 @@ const Navbar = ({ activeSection }) => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-50 p-2 text-gray-300 hover:text-primary-400 transition-colors"
+            className="md:hidden relative z-50 p-2 text-gray-300 hover:text-blue-400 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -150,8 +152,8 @@ const Navbar = ({ activeSection }) => {
                     onClick={(e) => { e.preventDefault(); scrollToSection(item.id); }}
                     className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
                       activeSection === item.id 
-                        ? 'bg-primary-500/20 text-primary-400 shadow-lg' 
-                        : 'text-gray-300 hover:text-primary-400 hover:bg-white/5'
+                        ? 'bg-blue-500/20 text-blue-400 shadow-lg' 
+                        : 'text-gray-300 hover:text-blue-400 hover:bg-white/5'
                     }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -163,7 +165,7 @@ const Navbar = ({ activeSection }) => {
                     <div className="flex items-center gap-3">
                       {activeSection === item.id && (
                         <motion.div
-                          className="w-1.5 h-6 bg-gradient-to-b from-primary-400 to-purple-500 rounded-full"
+                          className="w-1.5 h-6 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full"
                           layoutId="mobile-indicator"
                           transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         />

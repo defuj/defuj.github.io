@@ -4,6 +4,8 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
+import GitHubStats from './sections/GitHubStats'
+import Donation from './sections/Donation'
 import Experience from './sections/Experience'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
@@ -13,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact']
+      const sections = ['home', 'about', 'skills', 'projects', 'github', 'donation', 'experience', 'contact']
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -30,13 +32,15 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black">
       <Navbar activeSection={activeSection} />
       <main>
         <Hero />
         <About />
         <Skills />
         <Projects />
+        <GitHubStats />
+        <Donation />
         <Experience />
         <Contact />
       </main>
