@@ -160,7 +160,7 @@ html {
 
 /* Selection */
 ::selection {
-  @apply bg-primary-500/30 text-white;
+  @apply bg-blue-500/30 text-white;
 }
 
 /* Card hover effects */

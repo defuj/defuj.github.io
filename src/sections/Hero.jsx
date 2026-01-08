@@ -72,7 +72,7 @@ const Hero = () => {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-primary-400 rounded-full"
+          className="absolute w-1 h-1 bg-blue-400 rounded-full"
           initial={{
             x: Math.random() * window.innerWidth,
             y: window.innerHeight + 100,
