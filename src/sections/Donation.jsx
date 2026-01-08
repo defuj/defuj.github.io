@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FaHeart, FaCoffee, FaPaypal } from "react-icons/fa";
-import { SiKofi } from "react-icons/si";
 
 const Donation = () => {
   const donationPlatforms = [

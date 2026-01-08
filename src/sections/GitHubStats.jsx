@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 const GitHubStats = () => {
   const username = "defuj";
+  const [imageErrors, setImageErrors] = useState({});
+
+  const handleImageError = (imageKey) => {
+    setImageErrors(prev => ({ ...prev, [imageKey]: true }));
+  };
 
   return (
     <section id="github" className="relative py-20 overflow-hidden">
@@ -45,11 +51,19 @@ const GitHubStats = () => {
                   <h3 className="text-xl font-semibold">GitHub Stats</h3>
                   <FaGithub className="w-6 h-6 text-blue-400" />
                 </div>
-                <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=60a5fa&text_color=e5e7eb&icon_color=3b82f6`}
-                  alt="GitHub Stats"
-                  className="w-full"
-                />
+                {imageErrors.stats ? (
+                  <div className="w-full h-48 flex items-center justify-center bg-gray-800/50 rounded-lg">
+                    <p className="text-gray-400">Unable to load GitHub stats</p>
+                  </div>
+                ) : (
+                  <img
+                    src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=60a5fa&text_color=e5e7eb&icon_color=3b82f6`}
+                    alt="GitHub Stats"
+                    className="w-full"
+                    loading="lazy"
+                    onError={() => handleImageError('stats')}
+                  />
+                )}
               </div>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -67,11 +81,19 @@ const GitHubStats = () => {
                   <h3 className="text-xl font-semibold">Top Languages</h3>
                   <FaGithub className="w-6 h-6 text-blue-400" />
                 </div>
-                <img
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=60a5fa&text_color=e5e7eb`}
-                  alt="Top Languages"
-                  className="w-full"
-                />
+                {imageErrors.languages ? (
+                  <div className="w-full h-48 flex items-center justify-center bg-gray-800/50 rounded-lg">
+                    <p className="text-gray-400">Unable to load language stats</p>
+                  </div>
+                ) : (
+                  <img
+                    src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=60a5fa&text_color=e5e7eb`}
+                    alt="Top Languages"
+                    className="w-full"
+                    loading="lazy"
+                    onError={() => handleImageError('languages')}
+                  />
+                )}
               </div>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -93,11 +115,19 @@ const GitHubStats = () => {
                 <h3 className="text-xl font-semibold">Contribution Streak</h3>
                 <FaGithub className="w-6 h-6 text-blue-400" />
               </div>
-              <img
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=tokyonight&hide_border=true&background=00000000&stroke=60a5fa&ring=3b82f6&fire=60a5fa&currStreakNum=e5e7eb&sideNums=e5e7eb&currStreakLabel=60a5fa&sideLabels=60a5fa&dates=9ca3af`}
-                alt="GitHub Streak"
-                className="w-full"
-              />
+              {imageErrors.streak ? (
+                <div className="w-full h-48 flex items-center justify-center bg-gray-800/50 rounded-lg">
+                  <p className="text-gray-400">Unable to load streak stats</p>
+                </div>
+              ) : (
+                <img
+                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=tokyonight&hide_border=true&background=00000000&stroke=60a5fa&ring=3b82f6&fire=60a5fa&currStreakNum=e5e7eb&sideNums=e5e7eb&currStreakLabel=60a5fa&sideLabels=60a5fa&dates=9ca3af`}
+                  alt="GitHub Streak"
+                  className="w-full"
+                  loading="lazy"
+                  onError={() => handleImageError('streak')}
+                />
+              )}
             </div>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -118,11 +148,19 @@ const GitHubStats = () => {
                 <h3 className="text-xl font-semibold">Contribution Graph</h3>
                 <FaGithub className="w-6 h-6 text-blue-400" />
               </div>
-              <img
-                src={`https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=tokyo-night&hide_border=true&bg_color=00000000&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=3b82f6`}
-                alt="GitHub Activity Graph"
-                className="w-full"
-              />
+              {imageErrors.graph ? (
+                <div className="w-full h-48 flex items-center justify-center bg-gray-800/50 rounded-lg">
+                  <p className="text-gray-400">Unable to load activity graph</p>
+                </div>
+              ) : (
+                <img
+                  src={`https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=tokyo-night&hide_border=true&bg_color=00000000&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=3b82f6`}
+                  alt="GitHub Activity Graph"
+                  className="w-full"
+                  loading="lazy"
+                  onError={() => handleImageError('graph')}
+                />
+              )}
             </div>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
