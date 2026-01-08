@@ -57,15 +57,15 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-500/20 rounded-lg">
-                      <info.icon className="w-5 h-5 text-primary-400" />
+                    <div className="p-3 bg-blue-500/20 rounded-lg">
+                      <info.icon className="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
                       <div className="text-sm text-gray-500 mb-1">{info.title}</div>
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-gray-300 hover:text-primary-400 transition-colors"
+                          className="text-gray-300 hover:text-blue-400 transition-colors"
                         >
                           {info.value}
                         </a>
@@ -93,7 +93,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-gray-300"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-300"
                   placeholder="Your name"
                 />
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-gray-300"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-300"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-gray-300"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-300"
                   placeholder="Subject"
                 />
               </div>
@@ -141,14 +141,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors text-gray-300 resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-300 resize-none"
                   placeholder="Your message..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary-600 hover:bg-primary-500 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50"
+                className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
               >
                 <FaPaperPlane />
                 Send Message

@@ -97,7 +97,7 @@ const Experience = () => {
                 onClick={() => setActiveIndex(idx)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeIndex === idx
-                    ? 'bg-gradient-to-r from-primary-500 to-purple-500 text-white shadow-lg shadow-primary-500/30'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30'
                     : 'glass-effect text-gray-400 hover:text-white'
                 }`}
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -174,15 +174,15 @@ const Experience = () => {
                       className="flex flex-wrap gap-4 text-sm"
                     >
                       <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-lg">
-                        <FaCalendar className="text-primary-400" />
+                        <FaCalendar className="text-blue-400" />
                         <span className="text-gray-300">{experiences[activeIndex].period}</span>
                       </div>
                       <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-lg">
-                        <FaMapMarkerAlt className="text-primary-400" />
+                        <FaMapMarkerAlt className="text-blue-400" />
                         <span className="text-gray-300">{experiences[activeIndex].location}</span>
                       </div>
                       <div className="glass-effect px-4 py-2 rounded-lg">
-                        <span className="text-primary-400 font-semibold">{experiences[activeIndex].duration}</span>
+                        <span className="text-blue-400 font-semibold">{experiences[activeIndex].duration}</span>
                       </div>
                     </motion.div>
                   </div>
@@ -218,7 +218,7 @@ const Experience = () => {
                         whileHover={{ x: 10, scale: 1.02 }}
                         className="flex items-center gap-3 glass-effect px-4 py-3 rounded-xl group cursor-pointer"
                       >
-                        <FaChevronRight className="text-primary-400 group-hover:text-primary-300 transition-colors flex-shrink-0" />
+                        <FaChevronRight className="text-blue-400 group-hover:text-blue-300 transition-colors flex-shrink-0" />
                         <span className="text-gray-300 group-hover:text-white transition-colors">
                           {highlight}
                         </span>
@@ -269,7 +269,7 @@ const Experience = () => {
               onClick={() => setActiveIndex(idx)}
               className={`transition-all duration-300 rounded-full ${
                 activeIndex === idx
-                  ? 'w-12 h-3 bg-gradient-to-r from-primary-500 to-purple-500'
+                  ? 'w-12 h-3 bg-gradient-to-r from-blue-500 to-purple-500'
                   : 'w-3 h-3 bg-gray-600 hover:bg-gray-500'
               }`}
               whileHover={{ scale: 1.2 }}

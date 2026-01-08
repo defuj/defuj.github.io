@@ -257,7 +257,7 @@ const Skills = () => {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 relative ${
                 activeCategory === cat.id
-                  ? 'bg-gradient-to-r from-primary-500 to-purple-500 text-white shadow-lg shadow-primary-500/30'
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30'
                   : 'glass-effect text-gray-400 hover:text-white hover:bg-white/10'
               }`}
               whileHover={{ scale: 1.05, y: -2 }}
@@ -337,7 +337,7 @@ const Skills = () => {
                   {/* Stats */}
                   <div className="space-y-1 text-xs text-gray-400">
                     <div className="flex items-center justify-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary-400"></span>
+                      <span className="w-2 h-2 rounded-full bg-blue-400"></span>
                       <span>{skill.experience}</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
@@ -429,7 +429,7 @@ const Skills = () => {
                   
                   {/* Glow on hover */}
                   <motion.div
-                    className="absolute inset-0 bg-primary-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"
+                    className="absolute inset-0 bg-blue-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"
                   />
                 </motion.div>
               ))}

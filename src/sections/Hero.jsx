@@ -26,7 +26,7 @@ const Hero = () => {
       {/* Animated Background Gradients */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
-          className="absolute w-[500px] h-[500px] bg-primary-500/30 rounded-full blur-[120px]"
+          className="absolute w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -40,7 +40,7 @@ const Hero = () => {
           style={{ top: '-20%', left: '-10%' }}
         />
         <motion.div 
-          className="absolute w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[120px]"
+          className="absolute w-[500px] h-[500px] bg-blue-700/20 rounded-full blur-[120px]"
           animate={{
             x: [0, -100, 0],
             y: [0, 100, 0],
@@ -54,7 +54,7 @@ const Hero = () => {
           style={{ bottom: '-20%', right: '-10%' }}
         />
         <motion.div 
-          className="absolute w-[300px] h-[300px] bg-pink-500/20 rounded-full blur-[100px]"
+          className="absolute w-[300px] h-[300px] bg-blue-500/15 rounded-full blur-[100px]"
           animate={{
             x: [0, 50, 0],
             y: [0, -80, 0],
@@ -72,7 +72,7 @@ const Hero = () => {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-primary-400 rounded-full"
+          className="absolute w-1 h-1 bg-blue-400 rounded-full"
           initial={{
             x: Math.random() * window.innerWidth,
             y: window.innerHeight + 100,
@@ -92,7 +92,7 @@ const Hero = () => {
 
       {/* Mouse follower */}
       <motion.div
-        className="absolute w-[300px] h-[300px] bg-primary-400/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none"
         animate={{
           x: mousePosition.x - 150,
           y: mousePosition.y - 150,
@@ -132,7 +132,7 @@ const Hero = () => {
                 deletionSpeed={60}
                 cursor={true}
                 repeat={Infinity}
-                className="text-gradient bg-gradient-to-r from-primary-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
+                className="text-gradient bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent"
                 style={{ 
                   backgroundSize: '200% auto',
                 }}
@@ -183,9 +183,9 @@ const Hero = () => {
                 transition={{ delay: 0.7 + index * 0.1 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
-                <social.icon className="w-6 h-6 text-gray-300 group-hover:text-primary-400 transition-colors relative z-10" />
+                <social.icon className="w-6 h-6 text-gray-300 group-hover:text-blue-400 transition-colors relative z-10" />
               </motion.a>
             ))}
           </motion.div>
@@ -203,13 +203,13 @@ const Hero = () => {
                 e.preventDefault()
                 document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })
               }}
-              className="relative px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 rounded-xl font-medium overflow-hidden group shine"
+              className="relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl font-medium overflow-hidden group shine"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">View My Work</span>
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-500"
+                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: '100%' }}
                 transition={{ duration: 0.5 }}
@@ -221,11 +221,11 @@ const Hero = () => {
                 e.preventDefault()
                 document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
               }}
-              className="px-8 py-4 glass-effect rounded-xl font-medium border-2 border-primary-500/50 hover:border-primary-400 transition-all duration-300 group"
+              className="px-8 py-4 glass-effect rounded-xl font-medium border-2 border-blue-500/50 hover:border-blue-400 transition-all duration-300 group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="group-hover:text-primary-400 transition-colors">Get In Touch</span>
+              <span className="group-hover:text-blue-400 transition-colors">Get In Touch</span>
             </motion.a>
           </motion.div>
         </div>
@@ -244,7 +244,7 @@ const Hero = () => {
           transition={{ duration: 2, repeat: Infinity }}
         >
           <motion.div 
-            className="w-1 h-3 bg-primary-400 rounded-full mt-2"
+            className="w-1 h-3 bg-blue-500 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
